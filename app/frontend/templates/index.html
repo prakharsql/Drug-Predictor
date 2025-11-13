@@ -1,0 +1,58 @@
+<!-- frontend/templates/index.html -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Drug Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Drug Prediction</h1>
+      <p>Enter patient features to predict drug category.</p>
+
+      <form action="/predict/" method="post" class="form">
+        <label>Age
+          <input type="number" name="age" value="30" required>
+        </label>
+
+        <label>Sex
+          <select name="sex">
+            <option value="F">Female (F)</option>
+            <option value="M">Male (M)</option>
+          </select>
+        </label>
+
+        <label>BP
+          <select name="bp">
+            <option value="LOW">LOW</option>
+            <option value="NORMAL">NORMAL</option>
+            <option value="HIGH">HIGH</option>
+          </select>
+        </label>
+
+        <label>Cholesterol
+          <select name="chol">
+            <option value="NORMAL">NORMAL</option>
+            <option value="HIGH">HIGH</option>
+          </select>
+        </label>
+
+        <label>Na_to_K
+          <input type="number" step="0.01" name="na_to_k" value="15.0" required>
+        </label>
+
+        <button type="submit">Predict</button>
+      </form>
+
+      <hr/>
+
+      <h3>Batch (CSV)</h3>
+      <p>Upload CSV with columns: <code>Age,Sex,BP,Cholesterol,Na_to_K</code></p>
+      <form action="/predict/file" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".csv" required>
+        <button type="submit">Upload & Predict</button>
+      </form>
+    </div>
+  </body>
+</html>

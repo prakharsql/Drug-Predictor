@@ -1,0 +1,43 @@
+/* frontend/static/style.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 32px;
+  background: #f7f9fc;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 22px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(30,30,30,0.06);
+}
+h1 { margin-top: 0; }
+label { display: block; margin: 10px 0; }
+input[type="number"], select, input[type="file"] {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  width: 100%;
+  box-sizing: border-box;
+}
+button {
+  margin-top: 12px;
+  background: #2b79ff;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover { opacity: 0.95; }
+.card {
+  border: 1px solid #eef2ff;
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 12px;
+}
+.prediction {
+  color: #1a73e8;
+  font-weight: bold;
+}
