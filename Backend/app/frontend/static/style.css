@@ -1,43 +1,76 @@
-/* frontend/static/style.css */
+/* Premium Vibrant UI - Drug Predictor */
+
+/* Global styling */
 body {
-  font-family: Arial, sans-serif;
-  margin: 32px;
-  background: #f7f9fc;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #1b1c22, #202736, #2b2f45);
+  background-size: 300% 300%;
+  animation: gradientShift 12s ease infinite;
+  color: #f5f7ff;
 }
+
+/* Background gradient animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Centered container with glassmorphism */
 .container {
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
-  background: white;
-  padding: 22px;
-  border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(30,30,30,0.06);
+  padding: 35px 40px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  animation: fadeIn 1.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
-h1 { margin-top: 0; }
-label { display: block; margin: 10px 0; }
+
+/* Smooth fade-in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #5cc6ff, #8f7aff, #f174ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 4s ease-in-out infinite alternate;
+}
+
+/* Title glow animation */
+@keyframes glow {
+  from { text-shadow: 0 0 8px rgba(255,255,255,0.2); }
+  to { text-shadow: 0 0 18px rgba(255,255,255,0.4); }
+}
+
+/* Labels */
+label {
+  display: block;
+  margin: 14px 0 6px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #f0f2ff;
+}
+
+/* Form inputs */
 input[type="number"], select, input[type="file"] {
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
   width: 100%;
-  box-sizing: border-box;
-}
-button {
-  margin-top: 12px;
-  background: #2b79ff;
-  color: white;
-  border: none;
-  padding: 10px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-button:hover { opacity: 0.95; }
-.card {
-  border: 1px solid #eef2ff;
   padding: 12px;
-  border-radius: 6px;
-  margin-top: 12px;
-}
-.prediction {
-  color: #1a73e8;
-  font-weight: bold;
-}
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #ffffff;
+  font-size: 15px;
+  transition: 0.3s

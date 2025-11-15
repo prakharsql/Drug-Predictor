@@ -4,7 +4,7 @@ from fastapi.templating import Jinja2Templates
 import pandas as pd
 import io
 
-from ..services.prediction_service import predict_single_service, predict_batch_service
+from ..services.prediction_service import predict_single_service
 
 templates = Jinja2Templates(directory="app/frontend/templates")
 
