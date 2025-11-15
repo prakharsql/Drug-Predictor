@@ -1,0 +1,29 @@
+<!-- frontend/templates/result.html -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Prediction Result</h1>
+
+      <div class="card">
+        <h3>Inputs</h3>
+        <ul>
+          <li>Age: {{ age }}</li>
+          <li>Sex: {{ sex }}</li>
+          <li>BP: {{ bp }}</li>
+          <li>Cholesterol: {{ chol }}</li>
+          <li>Na_to_K: {{ na_to_k }}</li>
+        </ul>
+
+        <h2>Predicted Drug: <span class="prediction">{{ prediction }}</span></h2>
+      </div>
+
+      <p><a href="/">Back</a></p>
+    </div>
+  </body>
+</html>
